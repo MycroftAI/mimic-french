@@ -1,0 +1,17 @@
+The French language analysis in mimic has been written mainly by Sergio Oller.
+
+The lexicon and the letter to sound rules were built using a very naive script and need
+to be reviewed as there are known errors.
+
+The original data (without so many errors) is based on the corpus from
+The SIWIS French Speech Synthesis Database under CC-BY 4.0.
+http://datashare.is.ed.ac.uk/handle/10283/2353
+
+The data is usable for any purpose, under the Creative Commons
+Attribution 4.0 International (CC BY 4.0) licence.  For more details
+on the database design and recording, please consult:
+
+Pierre-Edouard Honnet, Alexandros Lazaridis, Philip N. Garner and Junichi Yamagishi,
+The SIWIS French Speech Synthesis Database – Design and recording of a high quality French
+database for speech synthesis, Idiap-Internal-RR-06-2017
+

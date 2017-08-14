@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# We may get rid of the dependencies other than python) in the future
+# sudo apt install speech-tools festival
+export WAGON=`which wagon` # speech-tools binary
+export WFST_BUILD=`which wfst_build` # speech-tools binary
+export FESTIVAL=`which festival`
+export PYTHON3=`which python3`
+
+THISSCRIPT=`readlink -f "$0"`
+SRCDIR=`dirname $THISSCRIPT`
+
+
+export BUILDDIR="$PWD"
+
+export LEX_LTS_PREFIX="fr"
+export LEX_INPUT="${SRCDIR}/${LEX_LTS_PREFIX}_dict.out"
+export LEX_INPUT_FMT="--lexicon-fmt-noflat"
+export LEX_DEF_SCM="${SRCDIR}/${LEX_LTS_PREFIX}_lex.scm"
+export ALLOWABLES="${SRCDIR}/${LEX_LTS_PREFIX}_allowables.json"
+export PHONESET_SCM="${SRCDIR}/${LEX_LTS_PREFIX}_phoneset.scm"
+
+mimic_make_lex
